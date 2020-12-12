@@ -5,16 +5,10 @@
        (cdkDropListDropped)="drop($event)">
     <h2 class="cards-list-title">Your Cards</h2>
     <app-payment-card class="payment-card"
-                      [title]="availableCards[0]"
+                      *ngFor="let card of availableCards"
+                      [title]="card"
                       cdkDragLockAxis="y"
                       cdkDrag></app-payment-card>
-    <app-payment-card class="payment-card"
-                      [title]="availableCards[1]"
-                      cdkDragLockAxis="y"
-                      cdkDrag></app-payment-card>
-    <app-payment-card class="payment-card"
-                      [title]="availableCards[2]"
-                      cdkDragLockAxis="y"
-                      cdkDrag></app-payment-card>
+
   </div>
 </div>
