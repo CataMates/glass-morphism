@@ -1,14 +1,19 @@
 .container {
-  display: inline-block;
+  display: flex;
+  flex-direction: column;
   background: rgba(255,255,255, 0.2);
-  padding: 3em;
-  border-radius: 3em;
+  padding: 18px 25px;
+  margin: 15px;
+  border-radius: 15px;
   position: relative;
   z-index: 1;
   backdrop-filter: blur(40px);
   border: solid 2px transparent;
   background-clip: padding-box;
   box-shadow: 10px 10px 10px  rgba(46, 54, 68, 0.03);
+  color: #FFF;
+  font-weight: 600;
+
   cursor: move;
 
   h2 {
@@ -21,5 +26,39 @@
 
   p {
       margin: 0;
+  }
+
+  .info {
+    margin-bottom: 25px;
+    font-size: 27px;
+    font-style: oblique;
+  }
+
+  .card-number-container {
+    letter-spacing: 4px;
+    margin-right: 25px;
+  }
+
+  .info-container {
+    margin-bottom: 15px;
+  }
+  .validity-container {
+    display: flex;
+    flex-direction: row;
+    .cvv-container {
+      margin-right: 90px;
+      font-weight: normal;
+      font-size: 12px;
+    }
+
+    .validity{
+      display: flex;
+      flex-direction: row;
+      .validity-text {
+        font-size: 8px;
+        margin-right: 3px;
+      }
+
+    }
   }
 }

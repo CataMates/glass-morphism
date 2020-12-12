@@ -6,7 +6,11 @@
     <h2 class="cards-list-title">Your Cards</h2>
     <app-payment-card class="payment-card"
                       *ngFor="let card of availableCards"
-                      [title]="card"
+                      [title]="card.title"
+                      [cardHolder]="card.cardHolder"
+                      [cardNumber]="card.cardNumber"
+                      [cvv]="card.cvv"
+                      [validity]="card.validity"
                       cdkDragLockAxis="y"
                       cdkDrag></app-payment-card>
 
