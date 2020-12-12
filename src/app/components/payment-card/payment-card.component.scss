@@ -32,6 +32,16 @@
     margin-bottom: 25px;
     font-size: 27px;
     font-style: oblique;
+    display: flex;
+    flex-direction: row;
+
+    .current-card-text {
+      margin-left: 25px;
+      font-size: 15px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
   }
 
   .card-number-container {
@@ -57,6 +67,10 @@
       .validity-text {
         font-size: 8px;
         margin-right: 3px;
+      }
+
+      .validity-date {
+        font-size: 14px;
       }
 
     }

@@ -13,7 +13,8 @@ export class AppComponent {
       cvv: '1234',
       validity: '10/24',
       cardHolder: 'Catalin Mates',
-      title: 'Visa'
+      title: 'Visa',
+      isFirst: true
     },
 
     {
@@ -34,9 +35,18 @@ export class AppComponent {
   title = 'glass-morphism';
 
   drop(event: CdkDragDrop<string[]>) {
+    debugger;
     transferArrayItem(event.previousContainer.data,
       event.container.data,
       event.previousIndex,
       event.currentIndex);
+    this.availableCards.forEach((card, index) => {
+      if (index === 0) {
+        card.isFirst = true;
+      } else {
+        card.isFirst = false;
+      }
+    })
+
   }
 }

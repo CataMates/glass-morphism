@@ -12,6 +12,7 @@ export class PaymentCardComponent implements OnInit {
   @Input() validity: string;
   @Input() cardHolder: string;
   @Input() title: string;
+  @Input() isFirst: string;
 
   constructor() { }
 
