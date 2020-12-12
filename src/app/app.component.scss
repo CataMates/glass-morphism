@@ -1,0 +1,47 @@
+body {
+  background: rgb(200, 220, 231);
+  color: black;
+  font-family: 'Poppins';
+  margin: 0;
+  // padding: 14em 14em 14em 20em;
+}
+
+.app-container {
+  height: 800px;
+  display: flex;
+  justify-content: center;
+
+  .cards-list {
+    display: flex;
+    flex-direction: column;
+    background-image: url("https://images.unsplash.com/photo-1557683304-673a23048d34?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=486&q=80");
+    padding: 0px 8px;
+
+    .cards-list-title {
+      color: #FFF;
+    }
+
+    h2{
+      text-align: center;
+    }
+  }
+
+  img {
+    position: absolute;
+    z-index: -2;
+    height: 800px
+  }
+
+  .cdk-drag-placeholder {
+    opacity: 0;
+  }
+
+  .cdk-drag-animating {
+    transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);
+  }
+
+  .cards-list.cdk-drop-list-dragging .payment-card:not(.cdk-drag-placeholder) {
+    transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);
+  }
+
+}
